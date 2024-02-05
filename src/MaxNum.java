@@ -12,17 +12,20 @@ public class MaxNum<W extends Comparable<W>>{
         Arrays.sort(values);
         return values[values.length-1];
     }
+    private static <P> void MaxPrint(P max) {
+        System.out.println("The Maximum is: " + max);
+    }
     // to find the max number or word method
     public void MaxTest(){
         W result = maxfind();
-        System.out.println("THe Maximum is : "+result);
+        MaxPrint(result);
     }
     public static void main(String[] args) {
-        MaxNum <Integer> intmax  = new MaxNum<>(54,34,88,47);
+        MaxNum <Integer> intmax  = new MaxNum<>(54,34,88,47,76,45,12);
         intmax.MaxTest();
-        MaxNum <Float> floatmax = new MaxNum<>(43.f,54.2f,22.6f,11.3f);
+        MaxNum <Float> floatmax = new MaxNum<>(43.f,33.9f,10.5f,54.2f,22.6f,11.3f);
         floatmax.MaxTest();
-        MaxNum <String> stringmax = new MaxNum<>("Well","Docker","Banana","Indigo");
+        MaxNum <String> stringmax = new MaxNum<>("Well","Docker","Banana","Key","Read","Indigo");
         stringmax.MaxTest();;
     }
 }
