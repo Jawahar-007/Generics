@@ -11,12 +11,20 @@ public class MaxNum<W extends Comparable<W>>{
     }
 
     public static void main(String[] args) {
-        MaxNum <Integer> nummax = new MaxNum<>();
-        int result = nummax.maxfind(25,43,11);
-        int result1 = nummax.maxfind(89,47,14);
-        int result2 = nummax.maxfind(32,98,45);
+        MaxNum <Integer> intmax  = new MaxNum<>();
+        int result = intmax.maxfind(25,43,11);
+        int result1 = intmax.maxfind(89,47,14);
+        int result2 = intmax.maxfind(32,98,45);
         System.out.println("The Maximum Number 1st set is :"+result);
         System.out.println("The Maximum Number 2nd set is :"+result1);
         System.out.println("The Maximum Number 3rd set is :"+result2);
+
+        MaxNum<Float> floatmax = new MaxNum<>();
+        float fresult = floatmax.maxfind(56.4f,32.6f,89.5f);
+        float fresult1 = floatmax.maxfind(43.1f,55.2f,76.8f);
+        float fresult2 = floatmax.maxfind(90.6f,32.4f,12.3f);
+        System.out.println("The Maximum number in 1st set is :"+fresult);
+        System.out.println("The Maximum number in 2nd set is :"+fresult1);
+        System.out.println("THe Maximum number in 3rd set is :"+fresult2);
     }
 }
