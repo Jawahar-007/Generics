@@ -26,5 +26,14 @@ public class MaxNum<W extends Comparable<W>>{
         System.out.println("The Maximum number in 1st set is :"+fresult);
         System.out.println("The Maximum number in 2nd set is :"+fresult1);
         System.out.println("THe Maximum number in 3rd set is :"+fresult2);
+
+        MaxNum<String> stringmax  = new MaxNum<>();
+        String stringresult = stringmax.maxfind("Apple","Banana","WaterMelon");
+        String stringresult1 = stringmax.maxfind("Indigo","Den","Wheat");
+        String stringresult2 = stringmax.maxfind("Oreo","Mango","Friend");
+        // Based on Unicode Value Of The String
+        System.out.println("The Maximum String in 1st Set is: "+stringresult);
+        System.out.println("The Maximum String in 2nd Set is: "+stringresult1);
+        System.out.println("The Maximum String in 3rd Set is: "+stringresult2);
     }
 }
